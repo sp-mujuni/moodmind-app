@@ -1,7 +1,3 @@
-# MoodMind: A Mood Detection and Recommendation System
-# 28th June 2024 / 10:42 p.m.
-
-# Import necessary libraries
 import firebase_admin
 from firebase_admin import credentials, firestore
 import google.cloud.exceptions
@@ -127,21 +123,43 @@ def start_video_capture(name, age):
     cv2.destroyAllWindows()
 
 # Function to handle the start button click event
-def start_button_clicked(e):
-    name = e.page.get_value("name_input")
-    age = e.page.get_value("age_input")
+def start_button_clicked(e, name_input, age_input):
+    name = name_input.value
+    age = age_input.value
     start_video_capture(name, age)
 
 # Create the Flet app
 def main(page: ft.Page):
     page.title = "Emotion Detector with Recommendation"
-    page.vertical_alignment = ft.VerticalAlignment.CENTER
+    page.vertical_alignment = ft.MainAxisAlignment.CENTER
+    page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
+    page.padding = 20
 
-    name_input = ft.TextField(label="Enter your name:")
-    age_input = ft.TextField(label="Enter your age:")
-    start_button = ft.IconButton(ft.icons.ADD, on_click=start_button_clicked)
+    # Create input fields and button
+    name_input = ft.TextField(label="Enter your name:", width=200)
+    age_input = ft.TextField(label="Enter your age:", width=200)
+    start_button = ft.ElevatedButton(text="Start Video Capture", on_click=lambda e: start_button_clicked(e, name_input, age_input))
 
-    page.add(name_input, age_input, start_button)
+    # Create a container to hold the input fields and button
+    container = ft.Container(
+        content=ft.Column(
+            [
+                ft.Text("MoodMind", style="headlineMedium", text_align=ft.TextAlign.CENTER),
+                name_input,
+                age_input,
+                start_button,
+            ],
+            alignment=ft.MainAxisAlignment.CENTER,
+            horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            spacing=20,
+        ),
+        width=300,
+        padding=20,
+        border_radius=20,
+        bgcolor=ft.colors.BLUE_GREY_50,
+        shadow=ft.BoxShadow(blur_radius=15, spread_radius=5, color=ft.colors.BLACK45),
+    )
+
+    page.add(container)
 
 ft.app(target=main)
-
