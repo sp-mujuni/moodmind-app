@@ -153,11 +153,11 @@ def main(page: ft.Page):
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
             spacing=20,
         ),
-        width=300,
+        width=400,
         padding=20,
-        border_radius=20,
-        bgcolor=ft.colors.BLUE_GREY_50,
-        shadow=ft.BoxShadow(blur_radius=15, spread_radius=5, color=ft.colors.BLACK45),
+        border_radius=15,
+        bgcolor=ft.colors.BLACK87,
+        shadow=ft.BoxShadow(blur_radius=15, spread_radius=5, color=ft.colors.BLACK87),
     )
 
     page.add(container)
