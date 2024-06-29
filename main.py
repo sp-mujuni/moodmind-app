@@ -136,8 +136,8 @@ def main(page: ft.Page):
     page.padding = 20
 
     # Create input fields and button
-    name_input = ft.TextField(label="Enter your name:", width=200)
-    age_input = ft.TextField(label="Enter your age:", width=200)
+    name_input = ft.TextField(label="Enter your name", width=200)
+    age_input = ft.TextField(label="Enter your age", width=200)
     start_button = ft.ElevatedButton(text="Start Video Capture", on_click=lambda e: start_button_clicked(e, name_input, age_input))
 
     # Create a container to hold the input fields and button
