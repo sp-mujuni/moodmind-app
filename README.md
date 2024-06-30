@@ -15,9 +15,10 @@ Ensure your system is connected to the internet as the script will interact with
 3. Open the Flutter App Version folder in an IDE (for example: VS Code)
 
 4. Using the IDE terminal, create a virtual environment to manage dependencies:
-- `python -m venv moodmind-env`
-- `cd moodmind-env`
-- `source bin/activate`. On Windows, use `.venv\Scripts\activate`
+- `python -m venv venv`
+- In cmd.exe: `venv\Scripts\activate.bat`
+- In PowerShell: `venv\Scripts\Activate.ps1`
+- Linux and MacOS venv activation: `$ source myvenv/bin/activate`
 
 5. Install Necessary Libraries:
 - `pip install firebase-admin`
