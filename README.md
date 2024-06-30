@@ -15,18 +15,18 @@ Ensure your system is connected to the internet as the script will interact with
 3. Open the Flutter App Version folder in an IDE (for example: VS Code)
 
 4. Using the IDE terminal, create a virtual environment to manage dependencies:
-python -m venv moodmind-env
-cd moodmind-env
-source bin/activate. On Windows, use `.\Scripts\activate`
+- python -m venv moodmind-env
+- cd moodmind-env
+- source bin/activate. On Windows, use `.\Scripts\activate`
 
 5. Install Necessary Libraries:
-pip install firebase-admin
-pip install google-cloud-firestore
-pip install opencv-python
-pip install deepface
-pip install python-dotenv
-pip install flet
-pip install google-generativeai
+- pip install firebase-admin
+- pip install google-cloud-firestore
+- pip install opencv-python
+- pip install deepface
+- pip install python-dotenv
+- pip install flet
+- pip install google-generativeai
 
 6. Run the script using the following command:
 python app.py
