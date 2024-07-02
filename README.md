@@ -31,3 +31,6 @@ Ensure your system is connected to the internet as the script will interact with
 
 6. Run the script using the following command:
 `python main.py`
+
+7. Closing the video feed:
+Press q on your keyboard
