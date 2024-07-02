@@ -30,4 +30,4 @@ Ensure your system is connected to the internet as the script will interact with
 - `pip install google-generativeai`
 
 6. Run the script using the following command:
-`python app.py`
+`python main.py`
